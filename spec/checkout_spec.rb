@@ -28,4 +28,14 @@ RSpec.describe Checkout do
       expect(actual_total).to eql(expected_total)
     end
   end
+
+  context 'when checkout with scanned B item' do
+    it 'total is thirty' do
+      expected_total = Money.new(30)
+      subject.scan(ItemCode.new('B'))
+      actual_total = subject.total
+
+      expect(actual_total).to eql(expected_total)
+    end
+  end
 end

@@ -1,7 +1,13 @@
 # frozen_string_literal: true
 
 class ItemCode
-  def initialize(item_code)
-    @item_code = item_code
+  attr_reader :code
+
+  def initialize(code)
+    @code = code
+  end
+
+  def eql?(other)
+    code == other.code
   end
 end
