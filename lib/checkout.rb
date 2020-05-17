@@ -3,17 +3,17 @@
 require 'money'
 
 class Checkout
-  attr_reader :money
+  attr_reader :total_money
 
   def initialize
-    @money = Money.new(0)
+    @total_money = Money.new(0)
   end
 
   def total
-    money
+    total_money
   end
 
   def scan(item_code)
-    @money = Money.new(50)
+    @total_money = Money.new(50)
   end
 end

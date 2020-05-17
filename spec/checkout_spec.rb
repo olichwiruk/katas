@@ -3,6 +3,7 @@
 require 'rspec'
 require 'checkout'
 require 'money'
+require 'item_code'
 
 RSpec.describe Checkout do
   subject do
@@ -21,7 +22,7 @@ RSpec.describe Checkout do
   context 'when checkout with scanned A item' do
     it 'total is fifty' do
       expected_total = Money.new(50)
-      subject.scan('A')
+      subject.scan(ItemCode.new('A'))
       actual_total = subject.total
 
       expect(actual_total).to eql(expected_total)
