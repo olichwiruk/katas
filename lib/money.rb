@@ -10,4 +10,8 @@ class Money
   def eql?(other)
     amount == other.amount
   end
+
+  def add(item_price)
+    @amount = item_price.amount
+  end
 end

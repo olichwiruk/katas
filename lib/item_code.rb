@@ -10,4 +10,8 @@ class ItemCode
   def eql?(other)
     code == other.code
   end
+
+  def hash
+    code.hash
+  end
 end
