@@ -12,6 +12,6 @@ class Money
   end
 
   def add(item_price)
-    @amount = item_price.amount
+    @amount += item_price.amount
   end
 end
